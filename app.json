@@ -1,0 +1,12 @@
+{
+  "name": "customBottomTab",
+  "displayName": "customBottomTab",
+  "expo": {
+    "name": "customBottomTab",
+    "slug": "customBottomTab",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
