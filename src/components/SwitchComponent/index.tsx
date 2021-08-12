@@ -20,7 +20,7 @@ export function SwitchComponent({ isEnabled, ...rest }: Props) {
     <Switch
       trackColor={{ false: disabledTrackColor, true: enabledTrackColor}}
       thumbColor={isEnabled ? enabledThumbColor : disabledThumbColor}
-      ios_backgroundColor="#D0D0D0"
+      ios_backgroundColor={theme.colors.primary50}
       value={isEnabled}
       {...rest}
     />

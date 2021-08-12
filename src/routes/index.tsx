@@ -8,8 +8,6 @@ import { useAppTheme } from '../hooks/appTheme';
 export function Routes() {
   const { appTheme } = useAppTheme();
 
-  console.log(appTheme)
-
   return (
     <ThemeProvider theme={appTheme}>
       <NavigationContainer>
