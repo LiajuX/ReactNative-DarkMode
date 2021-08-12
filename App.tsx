@@ -1,19 +1,22 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { ThemeProvider } from 'styled-components/native';
+
+import { AppThemeProvider, useAppTheme } from './src/hooks/appTheme';
+
+import { Routes } from './src/routes';
+
+import { light, dark } from './src/global/styles/theme';
 
 export default function App() {
+  const { isDarkMode } = useAppTheme();
+
+  const theme = isDarkMode ? dark : light;
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
+    <AppThemeProvider>
+      <ThemeProvider theme={theme}>
+        <Routes />
+      </ThemeProvider>
+    </AppThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

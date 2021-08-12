@@ -1,9 +1,9 @@
 {
-  "name": "customBottomTab",
-  "displayName": "customBottomTab",
+  "name": "darkMode",
+  "displayName": "darkMode",
   "expo": {
-    "name": "customBottomTab",
-    "slug": "customBottomTab",
+    "name": "darkMode",
+    "slug": "darkMode",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
