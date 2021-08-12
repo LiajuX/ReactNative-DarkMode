@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, SwitchProps } from 'react-native';
+import { useTheme } from 'styled-components';
 
 import { useAppTheme } from '../../hooks/appTheme';
 
@@ -8,12 +9,12 @@ interface Props extends SwitchProps {
 }
 
 export function SwitchComponent({ isEnabled, ...rest }: Props) {
-  const { isDarkMode } = useAppTheme();
+  const theme = useTheme();
 
-  const enabledTrackColor = isDarkMode ? '#1D1D1D' : '#D0D0D0';
-  const disabledTrackColor = isDarkMode ? '#1D1D1D' : '#D0D0D0';
-  const enabledThumbColor = isDarkMode ? '#C87BF4' : '#641E8C';
-  const disabledThumbColor = isDarkMode ? '#4E4E4E' : '#EBEBEB';
+  const enabledTrackColor = theme.colors.primary50;
+  const disabledTrackColor = theme.colors.primary50;
+  const enabledThumbColor = theme.colors.secondary;
+  const disabledThumbColor = theme.colors.switch_off;
 
   return (
     <Switch

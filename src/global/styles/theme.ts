@@ -1,4 +1,6 @@
 export const light = {
+  title: 'light',
+
   colors: {
     primary40: '#DCDCDC',
     primary50: '#D0D0D0',
@@ -12,6 +14,8 @@ export const light = {
     success: '#03C04F',
     text: '#000000',
     text_light: ' #5B5F68',
+
+    switch_off: '#EBEBEB',
   },
 
   fonts: {
@@ -22,6 +26,8 @@ export const light = {
 }
 
 export const dark = {
+  title: 'dark',
+
   colors: {
     primary40: '#DCDCDC',
     primary50: '#1D1D1D',
@@ -35,6 +41,8 @@ export const dark = {
     success: '#03C04F',
     text: '#FFFFFF',
     text_light: ' #D0D0D0',
+
+    switch_off: '#4E4E4E',
   },
 
   fonts: {

@@ -2,21 +2,16 @@ import React from 'react';
 
 import { useAppTheme } from '../../hooks/appTheme';
 
-import { SwitchComponent } from '../../components/SwitchComponent';
-
 import { Container, Title } from './styles';
 
 export function Home() {
-  const { isDarkMode, toggleAppTheme } = useAppTheme();
+  const { appTheme } = useAppTheme();
+
+  console.log('##CONSOLE DO APP THEME NA HOME##', appTheme);
 
   return (
     <Container>
       <Title>Home</Title>
-
-      <SwitchComponent
-        isEnabled={isDarkMode}
-        onValueChange={toggleAppTheme}
-      />
     </Container>
   );
 }

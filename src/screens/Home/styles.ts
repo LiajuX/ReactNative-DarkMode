@@ -9,7 +9,7 @@ export const Container = styled.View`
 `;
 
 export const Title = styled.Text`
-  margin-bottom: 12px;
+  margin-bottom: 120px;
 
   color: ${({ theme }) => theme.colors.secondary};
 

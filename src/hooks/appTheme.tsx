@@ -5,28 +5,36 @@ import React, {
   useState
 } from 'react';
 
+import { DefaultTheme } from 'styled-components/native';
+
+import { light, dark } from '../global/styles/theme';
+
 interface AppThemeProviderProps {
   children: ReactNode;
 }
 
 
 interface AppThemeData {
-  isDarkMode: boolean;
+  appTheme: DefaultTheme;
   toggleAppTheme: () => void;
 }
 
 const AppThemeContext = createContext({} as AppThemeData);
 
 function AppThemeProvider({ children }: AppThemeProviderProps) {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [appTheme, setAppTheme] = useState<DefaultTheme>(light);
 
   function toggleAppTheme() {
-    setIsDarkMode(previousState => !previousState);
+    if (appTheme === light) {
+      setAppTheme(dark);
+    } else {
+      setAppTheme(light);
+    }
   }
 
   return (
     <AppThemeContext.Provider value={{ 
-      isDarkMode,
+      appTheme,
       toggleAppTheme,
     }}>
       { children }
